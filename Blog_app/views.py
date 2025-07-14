@@ -11,3 +11,11 @@ def post_list(request):
         "post_list.html",
         {"posts": posts},
     )
+    
+def post_details(request,pk):
+    post = Post.objects.get(pk=pk) # pk = primary key same as id 
+    return render(
+        request,
+        "post_detail.html",
+        {"post": post},
+    )
