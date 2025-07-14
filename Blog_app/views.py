@@ -5,7 +5,7 @@ from Blog_app.models import Post
 
 
 def post_list(request):
-    posts = Post.objects.all()
+    posts = Post.objects.exclude(published_at = None)
     return render(
         request,
         "post_list.html",
