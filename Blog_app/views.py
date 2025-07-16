@@ -37,3 +37,15 @@ def draft_detail(request , pk):
         "draft_detail.html",
         {"post": post},
     )
+
+# def draft_publish(request,pk):
+    post = Post.objects.get(pk = pk , published_at__isnull = True)
+    return render(
+        request,
+        'post-list.html',
+        {'posts': post},
+    )
+    
+
+    
+    
