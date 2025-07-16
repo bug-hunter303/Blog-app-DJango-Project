@@ -5,10 +5,11 @@ from Blog_app.models import Post
 
 
 def post_list(request):
-    posts = Post.objects.exclude(published_at = None)
+    posts = Post.objects.filter(published_at__isnull = False) # data vako
+    # posts = Post.objects.exclude(published_at = None)
     return render(
         request,
-        "post_list.html",
+        "draft_list.html",
         {"posts": posts},
     )
     

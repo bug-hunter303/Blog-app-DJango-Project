@@ -13,6 +13,8 @@ class Post(models.Model): # POST Bhaneko many ho so foreignkey use gareko
     def __str__(self):
         return self.title
 
+# published_at => data xaina => null value xa 
+# published_at => data rakhne => data nai hunxa 
 
 ## 1-1 Relationship 
 # 1 user can have only 1 profile => 1
