@@ -16,8 +16,9 @@ class Post(models.Model): # POST Bhaneko many ho so foreignkey use gareko
 # published_at => data xaina => null value xa 
 # published_at => data rakhne => data nai hunxa 
 
-## 1-1 Relationship 
+## 1-1 Relationship A
 # 1 user can have only 1 profile => 1
+# 1 profile is associated to only 1 user => 1
 # 1 profile is associated to only 1 user => 1
 # OneToOneField() => Any model
 
