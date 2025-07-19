@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 def post_list(request):
-    posts = Post.objects.filter(published_at__isnull = False) # data vako
+    posts = Post.objects.filter(published_at__isnull = False).order_by('-published_at') # data vako
     # posts = Post.objects.exclude(published_at = None)
     return render(
         request,
